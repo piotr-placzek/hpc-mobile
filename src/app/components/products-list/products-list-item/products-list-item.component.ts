@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IProduct } from 'src/app/interfaces/product.interface';
 
 @Component({
@@ -8,6 +8,4 @@ import { IProduct } from 'src/app/interfaces/product.interface';
 })
 export class ProductsListItem {
   @Input() product!: IProduct;
-  @Output() toggleWishlisted = new EventEmitter();
-  @Output() toggleOwned = new EventEmitter();
 }
