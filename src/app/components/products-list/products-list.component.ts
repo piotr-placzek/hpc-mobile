@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { IProduct } from 'src/app/interfaces/product.interface';
+import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'hpc-products-list',
@@ -8,4 +9,6 @@ import { IProduct } from 'src/app/interfaces/product.interface';
 })
 export class ProductsList {
   @Input() products: IProduct[] = [];
+  @Output() toggleWishlisted = new EventEmitter();
+  @Output() toggleOwned = new EventEmitter();
 }

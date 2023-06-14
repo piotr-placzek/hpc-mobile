@@ -1,5 +1,8 @@
-<ion-list [inset]="true">
-  <ion-item *ngFor="let item of products">
-    <ion-label>{{ item.name }}</ion-label>
-  </ion-item>
+<ion-list [inset]="false">
+  <hpc-products-list-item
+    *ngFor="let product of products"
+    [product]="product"
+    (toggleWishlisted)="toggleWishlisted.emit()"
+    (toggleOwned)="toggleOwned.emit()"
+  ></hpc-products-list-item>
 </ion-list>

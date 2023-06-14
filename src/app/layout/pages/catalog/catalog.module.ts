@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
-import { ProductsList } from 'src/app/components/products-list/products-list.component';
+import { ProductsListModule } from 'src/app/components/products-list/products-list.module';
 import { CatalogPage } from './catalog.page';
 
 @NgModule({
@@ -12,7 +12,8 @@ import { CatalogPage } from './catalog.page';
     CommonModule,
     FormsModule,
     RouterModule.forChild([{ path: '', component: CatalogPage }]),
+    ProductsListModule,
   ],
-  declarations: [CatalogPage, ProductsList],
+  declarations: [CatalogPage],
 })
 export class CatalogPageModule {}

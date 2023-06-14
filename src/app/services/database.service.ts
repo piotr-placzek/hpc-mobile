@@ -54,6 +54,15 @@ export class DatabaseService {
         owned: false,
         wishlisted: false,
       },
+      {
+        id: 'example-id',
+        manufacturer: 'example-manufacturer',
+        name: 'example-name',
+        description: 'example-description',
+        image: 'example-image',
+        owned: false,
+        wishlisted: false,
+      },
     ]);
   }
 
