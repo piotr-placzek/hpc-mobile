@@ -1,0 +1,7 @@
+{
+  "name": "hpc-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
