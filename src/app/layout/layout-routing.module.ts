@@ -15,6 +15,13 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'product/:manufacturer/:id',
+        loadChildren: () =>
+          import('./pages/product-details/product-details.module').then(
+            (m) => m.ProductDetailsPageModule
+          ),
+      },
+      {
         path: '',
         redirectTo: '/catalog',
         pathMatch: 'full',

@@ -46,24 +46,43 @@ export class DatabaseService {
     //   .catch(this.handleError([]));
     return Promise.resolve([
       {
-        id: 'example-id',
-        manufacturer: 'example-manufacturer',
-        name: 'example-name',
-        description: 'example-description',
-        image: 'example-image',
+        id: 'WP2074',
+        manufacturer: 'army-painter',
+        name: 'Hoard Bronze',
+        description: 'description here',
+        image:
+          'https://www.thearmypainter.com/shop/media/catalog/product/cache/7e4f11d7d3cf5b69648cd19d19c55f74/W/P/WP2074___Hoard_Bronze___img_1_4b1d.jpg',
         owned: false,
         wishlisted: false,
       },
       {
-        id: 'example-id',
-        manufacturer: 'example-manufacturer',
-        name: 'example-name',
+        id: '99189951016',
+        manufacturer: 'games-workshop',
+        name: 'Calgar Blue',
         description: 'example-description',
-        image: 'example-image',
+        image:
+          'https://www.games-workshop.com/resources/catalog/product/600x620/99189951016_layerCalgarBlue.svg',
         owned: false,
         wishlisted: false,
       },
     ]);
+  }
+
+  public getProductById(id: string, manufacturer: string): Promise<IProduct> {
+    // return this.db.executeSql(`SELECT * FROM products WHERE id='${id} AND manufacturer='${manufacturer}`)
+    //   .then(this.mapProducts)
+    //   .catch(this.handleError([]))
+    //   .then((array) => array[0]);
+    return Promise.resolve({
+      id: 'WP2074',
+      manufacturer: 'army-painter',
+      name: 'Hoard Bronze',
+      description: 'description here',
+      image:
+        'https://www.thearmypainter.com/shop/media/catalog/product/cache/7e4f11d7d3cf5b69648cd19d19c55f74/W/P/WP2074___Hoard_Bronze___img_1_4b1d.jpg',
+      owned: false,
+      wishlisted: false,
+    });
   }
 
   private seedDatabase() {

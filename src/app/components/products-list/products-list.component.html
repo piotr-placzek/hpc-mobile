@@ -1,6 +1,8 @@
+<ion-searchbar animated="true" placeholder="Search"></ion-searchbar>
 <ion-list [inset]="false">
   <hpc-products-list-item
     *ngFor="let product of products"
     [product]="product"
+    (click)="productClicked.emit($event)"
   ></hpc-products-list-item>
 </ion-list>
