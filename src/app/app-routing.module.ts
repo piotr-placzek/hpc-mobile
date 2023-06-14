@@ -8,6 +8,7 @@ const routes: Routes = [
       import('./layout/layout.module').then((m) => m.LayoutModule),
   },
 ];
+
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
